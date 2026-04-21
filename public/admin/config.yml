@@ -6,15 +6,10 @@ media_folder: "public/images"
 public_folder: "/images"
 
 collections:
-  - name: "berita"
-    label: "Berita"
+  - name: "post"
+    label: "Post"
     folder: "content/posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Judul", name: "title", widget: "string" }
-      - { label: "Tanggal", name: "date", widget: "datetime" }
-      - { label: "Penulis", name: "author", widget: "string" }
-      - { label: "Kategori", name: "category", widget: "select", options: ["Nasional", "Teknologi", "Pendidikan"] }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
-      - { label: "Isi Berita", name: "body", widget: "markdown" }
+      - { label: "Isi", name: "body", widget: "markdown" }
